@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Condiciones y Bucles </title>
+
+        
+    <script>
+        var arreglo = [];  //números aleatorios
+        var par = 1;
+        var impar = 0;
+        var suma = 0;
+        var LP= " ";
+        var LNP= " ";
+
+        for( var i =0; i<20; i++){  //bucle for, para hacer la suma
+            arreglo[i] = Math.round(Math.random()*100);
+            alert("Números aleatorios : " + arreglo[i]);
+            suma += arreglo[i];
+                  
+            if(arreglo[i]%2==0){                //para sacar número par e impar
+                par=par*arreglo[i];             //multiplicación de los números pares
+            }
+            else{
+               impar +=arreglo[i];                  //suma de los números impares   
+            } 
+
+        
+        
+        
+        } 
+        //verificacion de numeros primo
+            
+        primo =0;
+            for(var i=1;i<arreglo[i];i++){
+                if(arreglo[i]%i==0){
+                    primo+=1;
+                }
+            
+                if(primo>2){
+                     LNP += "-"+arreglo[i];
+                }
+                else{
+                    LP+="-"+arreglo[i];
+                } 
+            }
+        
+
+        alert("la suma tota es: "+ suma);
+        alert("La multiplicación total de los pares es:"+par);
+        alert("La suma de los impares es: "+impar);
+        alert("Los números que no son primos: "+LNP);
+        alert("La lista de los números que son primos:"+LP);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
